@@ -1,17 +1,18 @@
 #include "main.h"
 
 /**
- * print_last_digit - return the absolute value of an integer
- * @val: - the input value
- * Return: last value of the digit
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-int print_last_digit(int val)
+int main(void)
 {
-	int digit;
+    int r;
 
-	digit = val % 10;
-	if (digit < 0)
-		digit *= -1
-	_putchar(digit + '0');
-	return (digit);
+    print_last_digit(98);
+    print_last_digit(0);
+    r = print_last_digit(-1024);
+    _putchar('0' + r);
+    _putchar('\n');
+    return (0);
 }
