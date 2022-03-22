@@ -6,7 +6,7 @@
  *
  * @str: in reverse.
  */
-|
+	|
 void print_rev(char *str)
 {
 	int i = 0;
