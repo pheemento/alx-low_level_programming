@@ -1,24 +1,19 @@
 #include "main.h"
 
 /**
- * _strchr -  function that locates a character in a string.
- * @s: cadena de caracteres.
- * @c: caracter a destacar.
- * Return: s.
+ * _strspn - function that gets the length of a substring
+ * @s: initial segment of the segment
+ * @accept: the bytes to accept
+ * Return: length
  */
-
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+	int i, j;
+	unsigned int count = 0;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-		if (s[i] == c)
-		{
-			return (s + i);
-		}
-	}
-	return (0);
+	for (i = 0; *(accept + i) != '\0'; i++)
+		for (j = 0; *(s + j) != '\0'; j++)
+			if (*(s + i) == *(accept + j))
+				count++;
+	return (count);
 }
